@@ -41,10 +41,11 @@ export class MarpExport {
             if (this.settings.EnableHTML){
                 argv.push('--html');
             }
-                        
+
             switch (type) {
                 case 'pdf':
                     argv.push('--pdf');
+                    argv.push('--no-pdf-page');
                     if (this.settings.EXPORT_PATH != ''){
                         argv.push('-o');
                         argv.push(`${this.settings.EXPORT_PATH}${file.basename}.pdf`);
