@@ -53,6 +53,7 @@ export class MarpExport {
                     break;
                 case 'pdf-with-notes':
                     argv.push('--pdf');
+                    argv.push('--no-pdf-page');
                     argv.push('--pdf-notes');
                     argv.push('--pdf-outlines');
                     if (this.settings.EXPORT_PATH != ''){
